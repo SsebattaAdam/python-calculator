@@ -10,6 +10,13 @@ window = Tk()
 window.title("simple calculator")
 window.geometry("500,500")
 
+equation_text =""
+
+equation_label= StringVar()
+
+Label 
+
+
 
 
 
