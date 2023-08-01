@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    {% extends 'main.html' %} {%block content%}
+
+    <h1>my another home template e</h1>
+
+    <div>
+      <a href="{% url'createRoom'%}"> Create Room</a>
+      <div>
+        {% for room in rooms %}
+        <div>
+          <h5>
+            <span> @{{room.host.username}}</span>
+            <br />
+            {{room.id}} -- <a href="{% url 'room' room.id %}">{{room.name}}</a>
+          </h5>
+          <small>{{room.topic.name}}</small>
+          <hr />
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {%endblock content%}
+
+    <script src="" async defer></script>
+  </body>
+</html>
